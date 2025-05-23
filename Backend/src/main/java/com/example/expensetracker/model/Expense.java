@@ -1,7 +1,5 @@
 package com.example.expensetracker.model;
 
-import java.sql.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,8 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Transactions")
-public class Transaction {
+@Table(name = "Expenses")
+public class Expense {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +24,5 @@ public class Transaction {
 	private Double amount;
 	private String type;
 	private String category;
-	private Date date;
+	private String date;
 }
