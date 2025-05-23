@@ -18,7 +18,10 @@ const createExpense = async (expense: ExpenseFormData): Promise<Expense> => {
   return response.data;
 };
 
-const updateExpense = async (id: number, expense: Expense): Promise<Expense> => {
+const updateExpense = async (
+  id: number,
+  expense: Expense
+): Promise<Expense> => {
   const response = await axios.put(`${API_URL}/expenses/${id}`, expense);
   return response.data;
 };
@@ -27,4 +30,10 @@ const deleteExpense = async (id: number): Promise<void> => {
   await axios.delete(`${API_URL}/expenses/${id}`);
 };
 
-export { getAllExpenses, getExpenseById, createExpense, updateExpense, deleteExpense };
+export {
+  getAllExpenses,
+  getExpenseById,
+  createExpense,
+  updateExpense,
+  deleteExpense,
+};

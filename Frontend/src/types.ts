@@ -1,14 +1,14 @@
 export enum ExpenseType {
-  RECURRING = 'Recurring',
-  ONE_TIME = 'One-time'
+  RECURRING = "Recurring",
+  ONE_TIME = "One-time",
 }
 
 export enum Category {
-  FOOD = 'Food',
-  ENTERTAINMENT = 'Entertainment',
-  HEALTH = 'Health',
-  TRAVEL = 'Travel',
-  OTHER = 'Other'
+  FOOD = "Food",
+  ENTERTAINMENT = "Entertainment",
+  HEALTH = "Health",
+  TRAVEL = "Travel",
+  OTHER = "Other",
 }
 
 export interface Expense {
@@ -18,6 +18,6 @@ export interface Expense {
   type: ExpenseType;
   category: Category;
   date: string;
-} 
+}
 
-export type ExpenseFormData = Omit<Expense, 'id'>;
+export type ExpenseFormData = Omit<Expense, "id">;
